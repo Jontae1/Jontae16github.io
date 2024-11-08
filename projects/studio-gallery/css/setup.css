@@ -21,77 +21,78 @@ body {
 .scene {
     width: 600px;
     height: 300px;
-    perspective: 500px; /* 500px */
+    perspective: 500px;
 }
 
-.alley {
+.gallery {
     width: 600px;
     height: 300px;
     position: relative;
     transform-style: preserve-3d;
-    transform: translateZ(500px) translateY(-0px) rotateX(0deg);
+    transform: translateZ(500px) translateY(-0px);
     /* 500px? */
 }
 
 .wall {
     position: absolute;
-    width: 1200px;
+    width: 600px;
     height: 300px;
-    border: 10px solid #7a7777;
-    border-width: 5px 1px 0px 1px;
+    border: 3px solid #666666;
     background: 
-        radial-gradient(#00000011 50%, #00000088),
-        bottom center/50% url("../images/red-brick-wall.jpg")
-        ;
+        radial-gradient(#00000011, #00000088),
+        20% center/50% url("../images/white-brick-wall.avif");
 }
 
-.sky {
+.ceiling {
     position: absolute;
-    width: 2400px;
-    height: 1200px;
-    border-width: 10px 1px;
-    background: center/cover url("../images/sky.jpg");
+    width: 600px;
+    height: 600px;
+    border: 2px solid #0f0f0f;
+}
+
+.ceiling {
+    background: 
+        radial-gradient(
+            #00000099,
+            #00000099
+        ),
+        center/25% url("../images/metal_ceiling_2.jfif");
+    transform: rotateX(-90deg) translateZ(-300px);
 }
 
 .floor {
     position: absolute;
-    width: 1600px;
-    height: 1200px;
+    width: 2400px;
+    height: 2400px;
     border: 2px solid #0f0f0f;
+}
+
+.floor {
     background: 
         radial-gradient(
             #00000088,
             #00000022
         ),
-        bottom url("../images/ground.jpg")
+        center/30% url("../images/wood_flooring_H.jpg")
         ;
-        transform: 
-            translateX(-500px) 
-            translateY(-300px) 
-            rotateX(90deg) 
-            translateZ(-20px);
+    transform: 
+        translateX(-900px) 
+        translateY(-900px) 
+        translateZ(-500px) 
+        rotateX(90deg) 
+        translateZ(-300px);
 }
 
 .left {
     transform: rotateY(90deg) translateZ(300px);
-    display: none;
 }
 
 .right {
     transform: rotateY(-90deg) translateZ(300px);
-    display: none;
-} 
-
-.back {
-    transform: rotateY(0deg) translateZ(-300px) translateX(-300px);
 }
 
-.sky {
-    transform: 
-        rotateY(0deg) 
-        translateZ(-600px) 
-        translateX(-900px) 
-        translateY(-900px);
+.back {
+    transform: rotateY(0deg) translateZ(-300px);
 }
 
 .showing-area {
@@ -107,4 +108,5 @@ body {
     height: 100%;
     display: inline-block;
     vertical-align: bottom;
+    -webkit-box-reflect: below 0px linear-gradient(transparent, #00000022);
 }

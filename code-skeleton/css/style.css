@@ -1,0 +1,22 @@
+{
+    box-sizing: border-box;}
+    
+    body {
+    margin: 0px;font-family: sans-serif;}
+    
+    #two-columns {
+    display:grid ;}
+    
+    #grid-out {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-areas: 
+        content sidebar;
+    }
+    
+    #sidebar-content {
+    background-color: lightblue;width: 200px;order: 2;}
+    
+    #main-content {
+    background-color: lightgreen;flex: 1;order: 1;}
+    
