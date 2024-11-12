@@ -1,0 +1,40 @@
+*{
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+#column-1 {
+    background-color: purple;
+    min-height: 100vh;
+}
+
+#column-2 {
+    background-color: black;
+    min-height: 100vh ;
+}
+
+#column-3 {
+    background-color: grey;
+    min-height: 100vh;
+}
+
+.fake-button {
+    background-color: blue;
+    padding: 12px;
+    border-radius: 24px;
+    text-align: center;
+    color: white;
+    margin: 12px;
+    display: inline-block;
+    min-width: 200px;
+
+}
